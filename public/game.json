@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "title": "Player Unknowns Battle Ground: PUBG",
+    "coverPhoto": "https://example.com/images/pubg.png",
+    "category": "FPS",
+    "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
+    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
+    "ratings": "4.5",
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Call of Duty: Mobile",
+    "coverPhoto": "https://example.com/images/codm.png",
+    "category": "FPS",
+    "downloadLink": "https://www.callofduty.com/mobile",
+    "description": "Call of Duty: Mobile brings console-quality FPS action to your phone with multiple game modes and realistic graphics.",
+    "ratings": "4.6",
+    "developer": "Activision"
+  },
+  {
+    "id": "3",
+    "title": "Clash of Clans",
+    "coverPhoto": "https://example.com/images/clashofclans.png",
+    "category": "Strategy",
+    "downloadLink": "https://supercell.com/en/games/clashofclans/",
+    "description": "Build your village, train troops, and clash with millions of other players in epic strategic battles.",
+    "ratings": "4.7",
+    "developer": "Supercell"
+  },
+  {
+    "id": "4",
+    "title": "Among Us",
+    "coverPhoto": "https://example.com/images/amongus.png",
+    "category": "Party",
+    "downloadLink": "https://innersloth.com/gameAmongUs.php",
+    "description": "Among Us is a multiplayer social deduction game where players work together while identifying impostors aboard a spaceship.",
+    "ratings": "4.4",
+    "developer": "Innersloth"
+  },
+  {
+    "id": "5",
+    "title": "Genshin Impact",
+    "coverPhoto": "https://example.com/images/genshin.png",
+    "category": "Adventure",
+    "downloadLink": "https://genshin.hoyoverse.com/en/",
+    "description": "Explore the vast open world of Teyvat, mastering elemental powers and uncovering hidden mysteries.",
+    "ratings": "4.8",
+    "developer": "HoYoverse"
+  },
+  {
+    "id": "6",
+    "title": "Subway Surfers",
+    "coverPhoto": "https://example.com/images/subwaysurfers.png",
+    "category": "Arcade",
+    "downloadLink": "https://sybogames.com/games/subway-surfers/",
+    "description": "Run, dodge, and surf through trains in this endless runner game packed with vibrant visuals and excitement.",
+    "ratings": "4.5",
+    "developer": "SYBO Games"
+  },
+  {
+    "id": "7",
+    "title": "Free Fire",
+    "coverPhoto": "https://example.com/images/freefire.png",
+    "category": "Battle Royale",
+    "downloadLink": "https://ff.garena.com/",
+    "description": "Free Fire is a survival shooter game set on a remote island where players fight to be the last one standing.",
+    "ratings": "4.3",
+    "developer": "Garena"
+  },
+  {
+    "id": "8",
+    "title": "Minecraft",
+    "coverPhoto": "https://example.com/images/minecraft.png",
+    "category": "Sandbox",
+    "downloadLink": "https://www.minecraft.net/en-us",
+    "description": "Minecraft lets players build, explore, and survive in a pixelated 3D world filled with endless possibilities.",
+    "ratings": "4.9",
+    "developer": "Mojang Studios"
+  },
+  {
+    "id": "9",
+    "title": "Asphalt 9: Legends",
+    "coverPhoto": "https://example.com/images/asphalt9.png",
+    "category": "Racing",
+    "downloadLink": "https://www.gameloft.com/en/game/asphalt-9",
+    "description": "Experience the thrill of high-speed street racing with stunning graphics and realistic car physics.",
+    "ratings": "4.6",
+    "developer": "Gameloft"
+  },
+  {
+    "id": "10",
+    "title": "Candy Crush Saga",
+    "coverPhoto": "https://example.com/images/candycrush.png",
+    "category": "Puzzle",
+    "downloadLink": "https://king.com/game/candycrush",
+    "description": "Match colorful candies and complete puzzles in this classic and addictive casual game loved by millions.",
+    "ratings": "4.4",
+    "developer": "King"
+  }
+]
