@@ -1,5 +1,6 @@
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import logoImg from "../assets/logo1.png";
+import photoImg from "../assets/photo.jpeg";
 import { VscThreeBars } from "react-icons/vsc";
 
 const Header = () => {
@@ -25,41 +26,44 @@ const Header = () => {
             {links}
           </div>
         </div>
-        <a className="btn btn-ghost hover:bg-transparent hover:shadow-none hover:border-0 ">
+        <Link
+          to="/"
+          className="btn btn-ghost hover:bg-transparent hover:shadow-none hover:border-0 "
+        >
           <img className="h-15" src={logoImg} alt="Logo Image" />
-        </a>
+        </Link>
       </div>
       <div className="flex ">
         <div className="gap-5 flex items-center mx-5 max-sm:hidden ">
           {links}
         </div>
-        <div className="dropdown dropdown-end">
+        <div className="dropdown dropdown-end hidden">
           <div
             tabIndex={0}
             role="button"
             className="btn btn-ghost btn-circle avatar"
           >
             <div className="w-10 rounded-full">
-              <img
-                alt="Tailwind CSS Navbar component"
-                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-              />
+              <img alt="Tailwind CSS Navbar component" src={photoImg} />
             </div>
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-30 p-2 shadow text-lg"
           >
             <li>
-              <a className="justify-between">Profile</a>
+              <a className="text-base">Profile</a>
             </li>
             <li>
-              <a>Settings</a>
+              <a className="text-base">Settings</a>
             </li>
             <li>
-              <a>Logout</a>
+              <a className="text-base">Logout</a>
             </li>
           </ul>
+        </div>
+        <div>
+          <button className="btn btn-primary">Login</button>
         </div>
       </div>
     </div>

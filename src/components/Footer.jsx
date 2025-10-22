@@ -1,63 +1,59 @@
-import React from "react";
+import { FaFacebookF, FaSlackHash, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="navbar bg-base-100 shadow-sm">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {" "}
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />{" "}
-            </svg>
-          </div>
-          <ul
-            tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-          >
-           
-          </ul>
-        </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+    <footer>
+      <div className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10 max-sm:justify-center">
+        <nav className=" max-sm:mx-auto">
+          <h6 className="footer-title">Company</h6>
+          <a className="link link-hover">About us</a>
+          <a className="link link-hover">Contact</a>
+          <a className="link link-hover">Jobs</a>
+          <a className="link link-hover">Press kit</a>
+        </nav>
+        <nav className="max-sm:mx-auto">
+          <h6 className="footer-title">Legal</h6>
+          <a className="link link-hover">Terms of use</a>
+          <a className="link link-hover">Privacy policy</a>
+          <a className="link link-hover">Cookie policy</a>
+        </nav>
+        <form>
+          <h6 className="footer-title max-sm:w-full max-sm:text-center">
+            Newsletter
+          </h6>
+          <fieldset className="flex flex-col">
+            <label className="max-sm:text-center mb-3">
+              Enter your email address
+            </label>
+            <div className="join">
+              <input
+                type="text"
+                placeholder="username@site.com"
+                className="input input-bordered join-item"
+              />
+              <button className="btn btn-primary join-item">Subscribe</button>
+            </div>
+          </fieldset>
+        </form>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
-        </ul>
+      <div className="footer sm:footer-horizontal bg-neutral text-neutral-content items-center justify-center p-4">
+        <aside className="grid-flow-col items-center">
+          <FaSlackHash size={20} />
+          <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+        </aside>
+        <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end max-sm:mx-auto">
+          <a>
+            <FaTwitter size={25} />
+          </a>
+          <a>
+            <FaYoutube size={25} />
+          </a>
+          <a>
+            <FaFacebookF size={25} />
+          </a>
+        </nav>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
-      </div>
-    </div>
+    </footer>
   );
 };
 
