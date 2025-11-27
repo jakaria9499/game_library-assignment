@@ -2,7 +2,7 @@ import { FaFacebookF, FaSlackHash, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer>
+    <div>
       <div className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10 max-sm:justify-center">
         <nav className=" max-sm:mx-auto">
           <h6 className="footer-title">Company</h6>
@@ -29,7 +29,7 @@ const Footer = () => {
               <input
                 type="text"
                 placeholder="username@site.com"
-                className="input input-bordered join-item"
+                className="input input-bordered join-item focus:outline-0"
               />
               <button className="btn btn-primary join-item">Subscribe</button>
             </div>
@@ -53,7 +53,7 @@ const Footer = () => {
           </a>
         </nav>
       </div>
-    </footer>
+    </div>
   );
 };
 

@@ -13,7 +13,7 @@ const Header = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm ">
       <div className="flex-1">
         <div className="dropdown sm:hidden">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -62,8 +62,11 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="px-3">
           <button className="btn btn-primary">Login</button>
+        </div>
+        <div>
+          <button className="btn btn-primary ">Register</button>
         </div>
       </div>
     </div>

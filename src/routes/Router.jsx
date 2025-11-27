@@ -10,8 +10,8 @@ const router = createBrowserRouter([
       {
         path: "/",
         Component: Main,
+        loader: () => fetch("/game.json"),
       },
-      {},
     ],
   },
 ]);
