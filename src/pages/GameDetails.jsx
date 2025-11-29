@@ -1,11 +1,47 @@
-import React from 'react';
+import { TiStarHalfOutline } from "react-icons/ti";
+import { Link, useLoaderData, useParams } from "react-router";
 
 const GameDetails = () => {
-    return (
-        <div>
-            
+  const id = useParams();
+  const data = useLoaderData();
+  const i = data.find((game) => game.id === id.id);
+  return (
+    <>
+      <div className="m-10">
+        <div className="flex space-x-10 max-sm:block max-sm:space-y-10">
+          <div>
+            <img className="rounded-lg h-48" src={i.coverPhoto} alt="" />
+          </div>
+          <div>
+            <h1 className="text-3xl font-bold mb-2">{i.title}</h1>
+            <p className="mb-3">
+              <span className="font-semibold">Developer:</span>
+              <span className="text-primary ml-2"> {i.developer}</span>
+            </p>
+            <div>
+              <p>
+                <span className="font-semibold">Category: </span>{" "}
+                <span className="text-primary">{i.category}</span>
+              </p>
+              <p className="mb-3 flex items-center gap-2">
+                <span className="font-semibold">Ratings:</span>{" "}
+                <span className="flex items-center gap-0.5 text-primary">
+                  <TiStarHalfOutline /> {i.ratings}
+                </span>
+              </p>
+            </div>
+            <Link to={i.downloadLink} className="btn btn-primary w-30">
+              Install
+            </Link>
+          </div>
         </div>
-    );
+        <div className="mt-10">
+            <h2 className="font-bold mb-3">About this game</h2>
+          <p>{i.description}</p>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default GameDetails;

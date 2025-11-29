@@ -10,7 +10,7 @@ const GameCard = ({ i }) => {
         <p className="bg-primary rounded-2xl px-1 ">{i.developer}</p>
         <p className="flex items-center bg-primary rounded-2xl px-1 ">
           <TiStarHalfOutline />
-          <p className="pl-1"></p>
+          <span className="pl-1"></span>
           {i.ratings}
         </p>
       </div>

@@ -8,8 +8,6 @@ const Header = () => {
     <>
       <NavLink to="/">Home</NavLink>
       <NavLink to="/all-games">All Games</NavLink>
-      <NavLink to="/about-us">About Us</NavLink>
-      <NavLink to="/contact-us">Contact Us</NavLink>
     </>
   );
   return (
@@ -21,7 +19,7 @@ const Header = () => {
           </div>
           <div
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow *:my-2"
           >
             {links}
           </div>
