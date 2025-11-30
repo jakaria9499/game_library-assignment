@@ -1,4 +1,5 @@
 import React from "react";
+import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router";
 
 const Register = () => {
@@ -14,7 +15,11 @@ const Register = () => {
               <label className="label">Email</label>
               <input type="email" className="input" placeholder="Email" />
               <label className="label">Photo URL</label>
-              <input type="url" className="input" placeholder=" Input Photo URL" />
+              <input
+                type="url"
+                className="input"
+                placeholder=" Input Photo URL"
+              />
               <label className="label">Password</label>
               <input type="password" className="input" placeholder="Password" />
               <button className="btn btn-primary mt-4">Register</button>
@@ -25,6 +30,22 @@ const Register = () => {
                 </Link>
               </p>
             </fieldset>
+            <div className="flex">
+              <p className="border-b-1 border-gray-600"></p>
+              <span className="w-15 text-center ">or</span>
+              <p className="border-b-1 border-gray-600"></p>
+            </div>
+            <div className="flex justify-center gap-5 mt-5">
+              <button className="btn btn-primary  rounded-lg">
+                <FaGoogle size={24} />
+              </button>
+              <button className="btn btn-primary rounded-lg ">
+                <FaGithub size={24} />
+              </button>
+              <button className="btn btn-primary rounded-lg">
+                <FaFacebook size={24} />
+              </button>
+            </div>
           </div>
         </div>
       </div>

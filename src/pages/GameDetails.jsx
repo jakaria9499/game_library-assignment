@@ -18,15 +18,15 @@ const GameDetails = () => {
               <span className="font-semibold">Developer:</span>
               <span className="text-primary ml-2"> {i.developer}</span>
             </p>
-            <div>
-              <p>
+            <div className="">
+              <p className="border-t-1 border-gray-600 pt-3 ">
                 <span className="font-semibold">Category: </span>{" "}
                 <span className="text-primary">{i.category}</span>
               </p>
               <p className="mb-3 flex items-center gap-2">
                 <span className="font-semibold">Ratings:</span>{" "}
                 <span className="flex items-center gap-0.5 text-primary">
-                  <TiStarHalfOutline /> {i.ratings}
+                <TiStarHalfOutline /> {i.ratings}
                 </span>
               </p>
             </div>
@@ -35,8 +35,8 @@ const GameDetails = () => {
             </Link>
           </div>
         </div>
-        <div className="mt-10">
-            <h2 className="font-bold mb-3">About this game</h2>
+        <div className="mt-10 border-t-1 border-gray-600 pt-5">
+          <h2 className="font-bold mb-3">About this game</h2>
           <p>{i.description}</p>
         </div>
       </div>

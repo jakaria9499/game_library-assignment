@@ -13,6 +13,9 @@ const router = createBrowserRouter([
   {
     path: "/",
     Component: HomeLayout,
+    errorElement: <div className="h-screen flex justify-center items-center">
+      Oops! The page you're looking for doesn't exist.
+    </div>,
     children: [
       {
         path: "/",
