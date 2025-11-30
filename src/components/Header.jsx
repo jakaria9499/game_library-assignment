@@ -61,10 +61,14 @@ const Header = () => {
           </ul>
         </div>
         <div className="px-3">
-          <button className="btn btn-primary">Login</button>
+          <Link className="btn btn-primary" to="/login">
+            Login
+          </Link>
         </div>
         <div>
-          <button className="btn btn-primary ">Register</button>
+          <Link className="btn btn-primary " to="/register">
+            Register
+          </Link>
         </div>
       </div>
     </div>

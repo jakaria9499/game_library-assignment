@@ -3,6 +3,11 @@ import HomeLayout from "../layouts/HomeLayout";
 import Main from "../pages/Main";
 import AllGames from "../pages/AllGames";
 import GameDetails from "../pages/GameDetails";
+import React from "react";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+// const Login = React.lazy(() => import("../pages/Login"));
+
 
 const router = createBrowserRouter([
   {
@@ -31,6 +36,14 @@ const router = createBrowserRouter([
           </div>
         ),
       },
+      {
+        path: "/login",
+        Component: Login,
+      },
+      {
+        path: "/register",
+        Component: Register,
+      }
     ],
   },
 ]);
