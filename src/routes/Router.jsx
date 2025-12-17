@@ -3,19 +3,20 @@ import HomeLayout from "../layouts/HomeLayout";
 import Main from "../pages/Main";
 import AllGames from "../pages/AllGames";
 import GameDetails from "../pages/GameDetails";
-import React from "react";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import Profile from "../pages/Profile";
 // const Login = React.lazy(() => import("../pages/Login"));
-
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: HomeLayout,
-    errorElement: <div className="h-screen flex justify-center items-center">
-      Oops! The page you're looking for doesn't exist.
-    </div>,
+    errorElement: (
+      <div className="h-screen flex justify-center items-center">
+        Oops! The page you're looking for doesn't exist.
+      </div>
+    ),
     children: [
       {
         path: "/",
@@ -40,13 +41,17 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "/profile",
+        Component: Profile,
+      },
+      {
         path: "/login",
         Component: Login,
       },
       {
         path: "/register",
         Component: Register,
-      }
+      },
     ],
   },
 ]);
