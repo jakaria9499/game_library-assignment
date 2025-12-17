@@ -4,7 +4,8 @@ import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Login = () => {
-  const { signIn, setUser } = useContext(AuthContext);
+  const { signIn, setUser, signInWithGoogle, signInWithGitHub } =
+    useContext(AuthContext);
   const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
@@ -19,6 +20,31 @@ const Login = () => {
       })
       .catch((error) => {
         console.log(error);
+        console.log(error.message);
+      });
+  };
+  const handleGoogle = () => {
+    console.log("google sign in");
+    signInWithGoogle()
+      .then((result) => {
+        const loggedUser = result.user;
+        setUser(loggedUser);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error.code);
+        console.log(error.message);
+      });
+  };
+  const handleGitHub = () => {
+    signInWithGitHub()
+      .then((result) => {
+        const loggedUser = result.user;
+        setUser(loggedUser);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error.code);
         console.log(error.message);
       });
   };
@@ -44,7 +70,9 @@ const Login = () => {
                 name="password"
               />
               <div>
-                <a className="link link-hover">Forgot password?</a>
+                <Link to="/forgetPassword" className="link link-hover">
+                  Forgot password?
+                </Link>
               </div>
               <button type="submit" className="btn btn-primary mt-4">
                 Login
@@ -62,10 +90,16 @@ const Login = () => {
               <p className="border-b-1 border-gray-600"></p>
             </div>
             <div className="flex justify-center gap-5 mt-5">
-              <button className="btn btn-primary  rounded-lg">
+              <button
+                onClick={handleGoogle}
+                className="btn btn-primary  rounded-lg"
+              >
                 <FaGoogle size={24} />
               </button>
-              <button className="btn btn-primary rounded-lg ">
+              <button
+                onClick={handleGitHub}
+                className="btn btn-primary rounded-lg "
+              >
                 <FaGithub size={24} />
               </button>
               <button className="btn btn-primary rounded-lg">

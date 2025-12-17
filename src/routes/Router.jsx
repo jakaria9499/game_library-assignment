@@ -6,6 +6,7 @@ import GameDetails from "../pages/GameDetails";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Profile from "../pages/Profile";
+import ForgetPassword from "../pages/ForgetPassword";
 // const Login = React.lazy(() => import("../pages/Login"));
 
 const router = createBrowserRouter([
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         Component: Register,
+      },
+      {
+        path: "/forgetPassword",
+        Component: ForgetPassword,
       },
     ],
   },

@@ -35,7 +35,9 @@ const Profile = () => {
               <h3 className="font-bold text-lg">Edit Profile</h3>
 
               {/* profile picture URL: */}
-              <label className="input validator mt-5">
+              <h1>Profile Picture URL:</h1>
+              <label className="input validator mt-2">
+                
                 <input
                   type="url"
                   placeholder="https://"
@@ -47,6 +49,7 @@ const Profile = () => {
 
               {/* profile name: */}
               <div>
+                <h1>Name:</h1>
                 <label className="input validator">
                   <input
                     type="text"
@@ -62,7 +65,7 @@ const Profile = () => {
               </div>
 
               {/* profile email: */}
-
+              <h1 className="">Email:</h1>
               <label className="input validator">
                 <input type="email" placeholder="mail@gmail.com" />
               </label>
@@ -71,8 +74,8 @@ const Profile = () => {
               </div>
 
               {/* password:  */}
-
-              <label className="input validator mt-5">
+              <h1 className="mt-5">Password:</h1>
+              <label className="input validator ">
                 <input
                   type="password"
                   placeholder="Password"
