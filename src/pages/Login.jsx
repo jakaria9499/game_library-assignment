@@ -57,7 +57,7 @@ const Login = () => {
       });
   };
   return (
-    <div className="hero bg-base-200 min-h-screen">
+    <div className="hero bg-base-200 py-10">
       <div className="hero-content w-full flex-col gap-10">
         <h1 className="text-2xl font-bold">Welcome to Login page</h1>
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
