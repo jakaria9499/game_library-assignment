@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Profile from "../pages/Profile";
 import ForgetPassword from "../pages/ForgetPassword";
+import PrivateRouter from "../Provider/PrivateRouter";
 // const Login = React.lazy(() => import("../pages/Login"));
 
 const router = createBrowserRouter([
@@ -32,7 +33,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/game-details/:id",
-        Component: GameDetails,
+        element: (
+          <PrivateRouter>
+            <GameDetails />
+          </PrivateRouter>
+        ),
         loader: () => fetch("/game.json"),
         hydrateFallbackElement: "Loading game details...",
         errorElement: (

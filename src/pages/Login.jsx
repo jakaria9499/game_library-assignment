@@ -1,13 +1,15 @@
 import React, { useContext, useState } from "react";
 import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
-import { Link, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Login = () => {
   const { signIn, setUser, signInWithGoogle, signInWithGitHub } =
     useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
   const [error, setError] = useState(null);
+
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -17,7 +19,8 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         setUser(loggedUser);
-        navigate("/");
+        console.log(location.state);
+        navigate(`${location.state ? location.state : "/"}`);
         setError(null);
       })
       .catch((error) => {
@@ -31,7 +34,8 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         setUser(loggedUser);
-        navigate("/");
+        console.log(location.state);
+        navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((error) => {
         console.log(error.code);
@@ -43,7 +47,9 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         setUser(loggedUser);
-        navigate("/");
+        console.log(location.state);
+
+        navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((error) => {
         console.log(error.code);
