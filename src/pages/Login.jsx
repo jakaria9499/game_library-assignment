@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
@@ -7,6 +7,7 @@ const Login = () => {
   const { signIn, setUser, signInWithGoogle, signInWithGitHub } =
     useContext(AuthContext);
   const navigate = useNavigate();
+  const [error, setError] = useState(null);
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -17,10 +18,11 @@ const Login = () => {
         const loggedUser = result.user;
         setUser(loggedUser);
         navigate("/");
+        setError(null);
       })
       .catch((error) => {
         console.log(error);
-        console.log(error.message);
+        setError("invalid credential");
       });
   };
   const handleGoogle = () => {
@@ -77,7 +79,10 @@ const Login = () => {
               <button type="submit" className="btn btn-primary mt-4">
                 Login
               </button>
-              <p className="font-semibold text-center pt-3">
+              <p className="font-semibold text-center pt-2 text-red-500">
+                {error}
+              </p>
+              <p className="font-semibold text-center pt-2">
                 Don't Have An Account ?{" "}
                 <Link className="text-secondary" to="/register">
                   Register
@@ -101,9 +106,6 @@ const Login = () => {
                 className="btn btn-primary rounded-lg "
               >
                 <FaGithub size={24} />
-              </button>
-              <button className="btn btn-primary rounded-lg">
-                <FaFacebook size={24} />
               </button>
             </div>
           </div>

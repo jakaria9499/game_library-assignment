@@ -11,7 +11,7 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
-import  { auth } from "../firebase/firebase.config";
+import { auth } from "../firebase/firebase.config";
 
 const AuthContext = createContext();
 const googleProvider = new GoogleAuthProvider();
@@ -25,7 +25,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const updateUser = (updatedData) => {
-    return updateProfile(user, updatedData);
+    return updateProfile(auth.currentUser, updatedData);
   };
   const signIn = (email, password) => {
     setLoading(true);
@@ -48,7 +48,7 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithPopup(auth, gitHubProvider);
   };
-
+  console.log(user);
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);

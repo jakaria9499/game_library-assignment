@@ -14,9 +14,8 @@ const ForgetPassword = () => {
              please check your inbox.`);
       })
       .catch((error) => {
-        console.log(error);
+        setStatus(error.message);
       });
-    console.log(email);
   };
   return (
     <div className="flex flex-col justify-center items-center bg-base-200 min-h-[500px]">
@@ -54,7 +53,7 @@ const ForgetPassword = () => {
           Sent
         </button>
       </form>
-      <p className="text-sm text-secondary mt-5">{status}</p>
+      <p className="text-sm text-green-500 mt-5">{status}</p>
     </div>
   );
 };
