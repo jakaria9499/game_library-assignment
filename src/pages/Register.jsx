@@ -2,8 +2,10 @@ import React, { use } from "react";
 import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
+import useTitle from "../hooks/useTitle";
 
 const Register = () => {
+  useTitle("Register");
   const {
     createUser,
     setUser,

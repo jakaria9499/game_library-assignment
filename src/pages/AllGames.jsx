@@ -1,9 +1,11 @@
 import React from "react";
 import { Link, useLoaderData } from "react-router";
 import GameCard from "../components/GameCard";
+import useTitle from "../hooks/useTitle";
 
 const AllGames = () => {
   const data = useLoaderData();
+  useTitle("All Games");
   return (
     <div className="grid grid-cols-3 gap-10 m-5 max-sm:grid-cols-1 max-lg:grid-cols-2">
       {data.map((i) => (

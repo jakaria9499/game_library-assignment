@@ -1,10 +1,12 @@
 import { TiStarHalfOutline } from "react-icons/ti";
 import { Link, useLoaderData, useParams } from "react-router";
+import useTitle from "../hooks/useTitle";
 
 const GameDetails = () => {
   const id = useParams();
   const data = useLoaderData();
   const i = data.find((game) => game.id === id.id);
+  useTitle(i.title);
   return (
     <>
       <div className="m-10">
@@ -26,7 +28,7 @@ const GameDetails = () => {
               <p className="mb-3 flex items-center gap-2">
                 <span className="font-semibold">Ratings:</span>{" "}
                 <span className="flex items-center gap-0.5 text-primary">
-                <TiStarHalfOutline /> {i.ratings}
+                  <TiStarHalfOutline /> {i.ratings}
                 </span>
               </p>
             </div>

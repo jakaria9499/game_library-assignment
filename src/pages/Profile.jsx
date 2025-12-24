@@ -3,9 +3,11 @@ import photoImg from "../assets/photo.jpeg";
 import { AuthContext } from "../Provider/AuthProvider";
 import { MdModeEdit } from "react-icons/md";
 import { IoIosClose } from "react-icons/io";
+import useTitle from "../hooks/useTitle";
 
 const Profile = () => {
   const { user, setUser, updateUser } = useContext(AuthContext);
+  useTitle(user.displayName);
   const editProfile = (e) => {
     e.preventDefault();
 
